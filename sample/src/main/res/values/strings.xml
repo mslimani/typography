@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Sample</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="regular">Regular</string>
+    <string name="light">Light</string>
+    <string name="medium">medium</string>
+    <string name="thin">thin</string>
+    <string name="bold">bold</string>
+    <string name="black">black</string>
+</resources>

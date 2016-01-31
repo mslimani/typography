@@ -1,0 +1,3 @@
+include ':typography', ':sample'
+
+rootProject.name = 'typography-parent'
