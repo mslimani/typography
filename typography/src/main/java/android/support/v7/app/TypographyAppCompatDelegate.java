@@ -5,6 +5,7 @@ import android.content.res.Configuration;
 import android.content.res.TypedArray;
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v4.view.LayoutInflaterCompat;
 import android.support.v4.view.LayoutInflaterFactory;
 import android.support.v7.view.ActionMode;
@@ -130,7 +131,7 @@ public class TypographyAppCompatDelegate extends AppCompatDelegate implements La
     }
 
     @Override
-    public ActionMode startSupportActionMode(ActionMode.Callback callback) {
+    public ActionMode startSupportActionMode(@NonNull ActionMode.Callback callback) {
         return mAppCompatDelegate.startSupportActionMode(callback);
     }
 
@@ -143,7 +144,7 @@ public class TypographyAppCompatDelegate extends AppCompatDelegate implements La
     }
 
     @Override
-    public View createView(View parent, String name, Context context, AttributeSet attrs) {
+    public View createView(View parent, String name, @NonNull Context context, @NonNull AttributeSet attrs) {
         View view = mAppCompatDelegate.createView(parent, name, context, attrs);
         setTypeface(view, context, attrs);
         return view;
@@ -157,6 +158,21 @@ public class TypographyAppCompatDelegate extends AppCompatDelegate implements La
     @Override
     public boolean isHandleNativeActionModesEnabled() {
         return mAppCompatDelegate.isHandleNativeActionModesEnabled();
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle bundle) {
+        mAppCompatDelegate.onSaveInstanceState(bundle);
+    }
+
+    @Override
+    public boolean applyDayNight() {
+        return mAppCompatDelegate.applyDayNight();
+    }
+
+    @Override
+    public void setLocalNightMode(int i) {
+        mAppCompatDelegate.setLocalNightMode(i);
     }
 
     @Override
